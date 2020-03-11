@@ -17,16 +17,30 @@
     ],
     "scripts": {
         "test": "mocha --colors",
-        "example": "parcel serve --no-autoinstall example/index.html"
+        "start": "tsc && node dist",
+        "example": "parcel serve --no-autoinstall example/index.html",
+        "push": "docker build . -t gcr.io/containerful/sigsevrepro && docker push gcr.io/containerful/sigsevrepro"
     },
     "keywords": [],
     "author": "Tommaso De Rossi, morse <beats.by.morse@gmail.com>",
     "license": "ISC",
     "devDependencies": {
         "@types/mocha": "^5.2.7",
-        "@types/node": "^12.0.7",
+        "@types/node": "^12.12.29",
         "mocha": "^6.1.4",
         "ts-node": "^8.2.0",
         "typescript": "^3.7.5"
+    },
+    "dependencies": {
+        "@types/express": "^4.17.3",
+        "@types/mongodb": "^3.5.2",
+        "containerful": "0.0.12",
+        "express": "^4.17.1",
+        "firebase": "^7.10.0",
+        "firebase-admin": "^8.9.2",
+        "grabity": "^1.0.5",
+        "jwt-decode": "^2.2.0",
+        "mongodb": "^3.5.5",
+        "yaml": "^1.8.2"
     }
 }

@@ -6,7 +6,7 @@ WORKDIR /workdir
 
 COPY *.json *.lock /workdir/
 
-RUN yarn
+RUN npm ci
 
 COPY . /workdir/
 
